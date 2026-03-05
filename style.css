@@ -50,6 +50,7 @@ h1 {
 }
 button {
 	position: absolute;
+	z-index: 1;
 	right: 20px;
 	bottom: 20px;
 	padding: 10px 30px;
@@ -120,4 +121,5 @@ span {
 	70% {
 		color: blue;
 	}
+
 }
