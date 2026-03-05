@@ -38,7 +38,7 @@ input {
 	position: absolute;
 	left: 20px;
 	bottom: 20px;
-	opacity: 0.5;
+	opacity: 0;
 }
 
 h1 {
@@ -123,4 +123,5 @@ span {
 	}
 
 }
+
 
