@@ -1,0 +1,123 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	width: 100%;
+	height: 100vh;
+	background: url(https://topkin.ru/wp-content/uploads/2016/10/1461059029_fd4965u-960.jpg) center/cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.container {
+	position: relative;
+	/* border: 1px solid #000; */
+	width: 80%;
+	/* min-height: 200px; */
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	color: palegoldenrod;
+	font-size: 24px;
+	text-shadow: 0 0 5px black, 0 0 10px black;
+}
+
+input {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	outline: none;
+	opacity: 0;
+}
+#waiting {
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+	opacity: 0;
+}
+
+h1 {
+	position: absolute;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	top: 20px;
+	left: 20px;
+	animation: color 9s infinite steps(1);
+}
+button {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	padding: 10px 30px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 3px 3px 5px black;
+	background-color: palegoldenrod;
+	animation: color 9s infinite steps(1);
+	cursor: pointer;
+}
+.word {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+}
+span {
+	display: inline-flex;
+	width: 50px;
+	height: 50px;
+	font-size: 30px;
+	border: 5px solid gray;
+	border-radius: 10px;
+	background-color: gainsboro;
+	justify-content: center;
+	align-items: center;
+}
+.yes {
+	animation: bravo 0.5s;
+}
+.win {
+	position: relative;
+	animation: win 0.5s 0.5s forwards;
+}
+@keyframes win {
+	0% {
+		scale: 1;
+	}
+	50% {
+		scale: 2;
+		z-index: 1;
+	}
+	100% {
+		scale: 1;
+		z-index: 0;
+		background-color: lightgreen;
+	}
+}
+@keyframes bravo {
+	0%, 100% {
+		scale: 1;
+	}
+	50% {
+		scale: 2;
+		background-color: lightgreen;
+	}
+}
+@keyframes color {
+	0% {
+		color: red;
+	}
+	
+	30% {
+		color: green;
+	}
+	
+	70% {
+		color: blue;
+	}
+}
