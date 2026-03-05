@@ -1,5 +1,6 @@
 let word = document.querySelector('.word')
 let play = document.querySelector('button')
+let mobileInput = document.querySelector('input')
 let container = document.querySelector('.container')
 let string =
 	`Он видит: Терек своенравный
@@ -34,6 +35,7 @@ let soundWaiting = document.querySelector('#waiting')
 let soundFanfary = document.querySelector('#fanfary')
 
 play.addEventListener('click', function () {
+	mobileInput.focus()
 	soundFanfary.pause()
 	soundFanfary.currentTime = 0
 	soundWaiting.pause()
@@ -57,6 +59,18 @@ play.addEventListener('click', function () {
 })
 
 document.addEventListener('keydown', showLetter)
+mobileInput.addEventListener('input', function (e) {
+
+	let letter = e.target.value.slice(-1)
+
+	if (!letter) return
+
+	showLetter({
+		key: letter
+	})
+
+	e.target.value = ''
+})
 
 function createArray(str) {
 
@@ -170,6 +184,7 @@ function getErrorWord(n) {
 	if (n1 == 1) return 'ошибка';
 	return 'ошибок';
 }
+
 
 
 
